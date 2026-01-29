@@ -34,13 +34,10 @@ const Header = () => {
               onClick={() => {
                 setToggle(!toggle);
               }}
-              className="mx-auto full bg-white/40 w-[45px] h-[45px] backdrop-blur-sm p-[.3rem]"
+              className="mx-auto full w-[45px] h-[45px] backdrop-blur-sm p-[.3rem]"
             />
-          </div>
-
-          {toggle && (
-            <>
-              <ul className="flex flex-col items-center gap-[2rem] absolute font-[500] top-[5rem] transform translate-x-[-43%] shadow-lg px-[5rem] py-[1.5rem] bg-white/40 backdrop-blur-sm w-fit rounded-[.8rem] border outline-none">
+            {toggle && (
+              <ul className="flex flex-col items-center gap-[2rem] absolute font-[600] top-[5rem] transform translate-x-[-43%] shadow-lg px-[5rem] py-[1.5rem] bg-white/40 backdrop-blur-sm w-fit rounded-[.8rem] border outline-none">
                 {links.map((link) => (
                   <li
                     key={link.id}
@@ -53,8 +50,8 @@ const Header = () => {
                   </li>
                 ))}
               </ul>
-            </>
-          )}
+            )}
+          </div>
         </nav>
       </header>
     </>

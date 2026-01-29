@@ -17,7 +17,7 @@ const Contact = () => {
         <SectionHeader title="Contact Me" />
       </div>
 
-      <div className="flex items-start justify-center gap-[4rem] mt-[5rem]">
+      <div className="flex items-start justify-center flex-col lg:flex-row gap-[4rem] mt-[5rem]">
         <div className="flex flex-1 flex-col gap-[2rem] w-full">
           <Link
             href={"mailto:othmanahmeddora@gmail.com"}
