@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 mx-auto mt-[2rem] flex justify-center z-[100]">
+      <header className="fixed left-0 right-0 w-full m-auto mt-[2rem] flex justify-center z-[100]">
         <nav className="hidden md:block">
           <ul className="flex gap-[2rem] font-[500] shadow-lg px-[1.8rem] py-[.7rem] bg-white/40 backdrop-blur-sm w-fit rounded-full border outline-none">
             {links.map((link) => (
@@ -28,7 +28,7 @@ const Header = () => {
       ---- SMALL NAV ---------
       --------------------- */}
 
-        <nav className="relative flex w-full m-auto md:hidden">
+        <nav className="relative flex justify-center w-full m-auto md:hidden">
           <div className="overflow-hidden border rounded-full shadow-xl">
             <FiMenu
               onClick={() => {
