@@ -35,12 +35,13 @@ const Qualification = () => {
         {type === "education" && (
           <div className="flex flex-col items-center">
             <div className="grid grid-cols-[1fr,max-content,1fr] gap-x-[1rem] md:gap-x-[3rem]">
-              <div className="pb-[2rem] w-[13.5rem]">
+              <div className="pb-[2rem]">
                 <h3 className="text-[1rem] md:text-[1.1rem] font-[500]">
                   Full-Stack (Python)
                 </h3>
                 <span className="text-neutral-400">
-                  Information Technology Institute (ITI)
+                  Information Technology <br />
+                  Institute (ITI)
                 </span>
                 <div className="flex gap-[.5rem] items-center text-[.8rem] md:text-[1rem]">
                   <LuCalendarDays /> Mar 2025 - Present{" "}
@@ -75,7 +76,7 @@ const Qualification = () => {
             <div className="grid grid-cols-[1fr,max-content,1fr] gap-x-[1rem] md:gap-x-[3rem]">
               <div className="pb-[2rem]">
                 <h3 className="text-[1rem] md:text-[1.1rem] font-[500]">
-                  Front-end Development
+                  Front-end Developer
                 </h3>
                 <span className="text-neutral-400">LinkedIn Learning</span>
                 <div className="flex gap-[.5rem] items-center text-[.8rem] md:text-[1rem]">
