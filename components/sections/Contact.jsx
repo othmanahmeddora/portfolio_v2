@@ -6,6 +6,8 @@ import { FaGithub } from "react-icons/fa6";
 import { GiClick } from "react-icons/gi";
 import Link from "next/link";
 import SectionHeader from "../components/SectionHeader";
+import { contactCards } from "@/lib/contactCards";
+import Image from "next/image";
 
 const Contact = () => {
   return (
@@ -19,69 +21,28 @@ const Contact = () => {
 
       <div className="flex items-start justify-center flex-col lg:flex-row gap-[4rem] mt-[5rem]">
         <div className="flex flex-1 flex-col gap-[2rem] w-full">
-          <Link
-            href={"mailto:othmanahmeddora@gmail.com"}
-            target="_blank"
-            className="flex flex-col items-center py-[1.5rem] w-full shadow-lg rounded-[.8rem]"
-          >
-            <MdOutlineMailOutline className="text-[1.5rem] text-neutral-800" />
+          {contactCards.map((card) => (
+            <Link
+              key={card.id}
+              href={card.path}
+              target="_blank"
+              className="flex flex-col items-center py-[1.5rem] w-full shadow-lg rounded-[.8rem]"
+            >
+              <Image
+                src={card.image}
+                alt={card.title}
+                width={1000}
+                height={1000}
+                className="text-neutral-800 w-[2rem]"
+              />
 
-            <h3 className="text-[1.1rem] mt-[.3rem] font-[500] text-neutral-800">
-              Email
-            </h3>
+              <h3 className="text-[1.1rem] mt-[.3rem] font-[500] text-neutral-800">
+                {card.title}
+              </h3>
 
-            <p className="text-neutral-400">othmanahmeddora@gmail.com</p>
-          </Link>
-
-          <Link
-            href={"https://wa.me/201011889502"}
-            target="_blank"
-            className="flex flex-col items-center py-[1.5rem] w-full shadow-lg rounded-[.8rem]"
-          >
-            <FaWhatsapp className="text-[1.5rem] text-neutral-800" />
-
-            <h3 className="text-[1.1rem] mt-[.3rem] font-[500] text-neutral-800">
-              WhatsApp
-            </h3>
-
-            <p className="text-neutral-400">+0201011889502</p>
-          </Link>
-
-          <Link
-            href="https://www.linkedin.com/in/othmanahmeddora/"
-            target="_blank"
-            className="flex flex-col items-center py-[1.5rem] w-full shadow-lg rounded-[.8rem]"
-          >
-            <FaLinkedin className="text-[1.5rem] text-neutral-800" />
-
-            <h3 className="text-[1.1rem] mt-[.3rem] font-[500] text-neutral-800">
-              LinkedIn
-            </h3>
-
-            <p className="text-neutral-400">
-              <p className="flex items-center gap-[.5rem]">
-                Click Me <GiClick />
-              </p>
-            </p>
-          </Link>
-
-          <Link
-            href="https://github.com/OthmanAhmed7"
-            target="_blank"
-            className="flex flex-col items-center py-[1.5rem] w-full shadow-lg rounded-[.8rem]"
-          >
-            <FaGithub className="text-[1.5rem] text-neutral-800" />
-
-            <h3 className="text-[1.1rem] mt-[.3rem] font-[500] text-neutral-800">
-              GitHub
-            </h3>
-
-            <p className="text-neutral-400">
-              <p className="flex items-center gap-[.5rem]">
-                Click Me <GiClick />
-              </p>
-            </p>
-          </Link>
+              <p className="text-neutral-400">{card.subject}</p>
+            </Link>
+          ))}
         </div>
 
         <div className="flex-[1.5] w-full">
