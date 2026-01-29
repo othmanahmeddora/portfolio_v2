@@ -37,13 +37,13 @@ const Header = () => {
       ---- SMALL NAV ---------
       --------------------- */}
 
-        <nav className="relative md:hidden">
-          <div className="rounded-full shadow-xl w-[45px] h-[45px] flex items-center justify-center border overflow-hidden">
+        <nav className="relative flex w-full m-auto md:hidden">
+          <div className="overflow-hidden border rounded-full shadow-xl">
             <FiMenu
               onClick={() => {
                 setToggle(!toggle);
               }}
-              className="w-full h-full mx-auto full bg-white/40 backdrop-blur-sm p-[.3rem]"
+              className="mx-auto full bg-white/40 w-[45px] h-[45px] backdrop-blur-sm p-[.3rem]"
             />
           </div>
 
