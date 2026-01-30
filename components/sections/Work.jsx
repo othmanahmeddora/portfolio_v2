@@ -31,7 +31,7 @@ const Work = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-[2rem] lg:gap-[4rem] mt-[4rem]">
         {projects.map((project) => (
-          <div key={project.id} className="rounded-[.8rem] shadow-xl">
+          <div key={project.id} className="rounded-[.8rem] shadow-xl mb-[2rem]">
             <div className="w-full h-[18rem] overflow-hidden relative">
               <Image
                 src={project.img}
