@@ -23,7 +23,7 @@ const Footer = () => {
         </button>
 
         <button>
-          <a href="https://github.com/OthmanAhmed7" target="_blank">
+          <a href="https://github.com/othmanahmeddora" target="_blank">
             <BsGithub className="h-7 w-7 text-neutral-800" />
           </a>
         </button>
